@@ -25,6 +25,8 @@
 		4DE934172140428900099D89 /* ShopViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE934162140428900099D89 /* ShopViewControllerDelegate.swift */; };
 		4DE934192140478000099D89 /* ShopTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE934182140478000099D89 /* ShopTypeCell.swift */; };
 		4DE9341B21404C2B00099D89 /* ShopTypeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9341A21404C2B00099D89 /* ShopTypeDelegate.swift */; };
+		4DE9341D21404FAD00099D89 /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9341C21404FAD00099D89 /* FilterModel.swift */; };
+		4DE9341F214053EF00099D89 /* FilterViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9341E214053EF00099D89 /* FilterViewControllerDelegate.swift */; };
 		B019C2D3E4A0CC4514088E90 /* Pods_SearchAndFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB413B0A3B027E5EB002401F /* Pods_SearchAndFilter.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		4DE934162140428900099D89 /* ShopViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewControllerDelegate.swift; sourceTree = "<group>"; };
 		4DE934182140478000099D89 /* ShopTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeCell.swift; sourceTree = "<group>"; };
 		4DE9341A21404C2B00099D89 /* ShopTypeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeDelegate.swift; sourceTree = "<group>"; };
+		4DE9341C21404FAD00099D89 /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
+		4DE9341E214053EF00099D89 /* FilterViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewControllerDelegate.swift; sourceTree = "<group>"; };
 		65F30FE3D033EBF008E38927 /* Pods-SearchAndFilter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchAndFilter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchAndFilter/Pods-SearchAndFilter.debug.xcconfig"; sourceTree = "<group>"; };
 		76D160FCBE84279CB9D8E99F /* Pods-SearchAndFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchAndFilter.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchAndFilter/Pods-SearchAndFilter.release.xcconfig"; sourceTree = "<group>"; };
 		AB413B0A3B027E5EB002401F /* Pods_SearchAndFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchAndFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +106,7 @@
 				4D774309213D87B9000B0229 /* AppDelegate.swift */,
 				4D77430B213D87B9000B0229 /* ListViewController.swift */,
 				4DA0642A213F063C0096EAB8 /* FilterViewController.swift */,
+				4DE9341E214053EF00099D89 /* FilterViewControllerDelegate.swift */,
 				4DE934142140338D00099D89 /* ShopViewController.swift */,
 				4DE934162140428900099D89 /* ShopViewControllerDelegate.swift */,
 				4D77430D213D87B9000B0229 /* Main.storyboard */,
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				4DA06423213ED62E0096EAB8 /* ProductModel.swift */,
+				4DE9341C21404FAD00099D89 /* FilterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE9341D21404FAD00099D89 /* FilterModel.swift in Sources */,
+				4DE9341F214053EF00099D89 /* FilterViewControllerDelegate.swift in Sources */,
 				4DE934192140478000099D89 /* ShopTypeCell.swift in Sources */,
 				4D77430C213D87B9000B0229 /* ListViewController.swift in Sources */,
 				4DA06424213ED62E0096EAB8 /* ProductModel.swift in Sources */,

@@ -15,8 +15,10 @@ class FilterViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet var maximumPriceField: UITextField!
     @IBOutlet var sliderView: MARKRangeSlider!
     @IBOutlet var shopTypeView: UICollectionView!
+    @IBOutlet var wholeSwitch: UISwitch!
     
     var activeType = [String]()
+    var delegate: FilterViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,8 @@ class FilterViewController: UIViewController, UICollectionViewDelegate, UICollec
         sliderView.setLeftValue(100, rightValue: 10000000)
         
         sliderView.minimumDistance = 1000
+        
+        wholeSwitch.setOn(false, animated: false)
     }
     
     @IBAction func rangeSliderValueChanged(slider: MARKRangeSlider) {
@@ -92,6 +96,12 @@ class FilterViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
 
     @IBAction func onClickApply(_ sender: UIButton) {
+        let minPrice = self.minimumPriceField.text!
+        let maxPrice = self.maximumPriceField.text!
+        let model = FilterModel(minP: minPrice, maxP: maxPrice, isWhole: wholeSwitch.isOn, isOfficial: activeType.contains("Official Store"), isGold: activeType.contains("Gold Merchant"))
         
+        self.delegate?.onApplyFilter(model: model)
+        
+        navigationController?.popViewController(animated: true)
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ProductConnectionManagerDelegate {
+class ListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ProductConnectionManagerDelegate, FilterViewControllerDelegate {
 
     @IBOutlet var collectionView: UICollectionView!
     
@@ -37,15 +37,23 @@ class ListViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return cell
     }
 
-    //MARK: connection manager delegate
+    //MARK: - connection manager delegate
     func connectionFinished(_ sender: ProductConnectionManager) {
         productList = (productManager?.products)!
         self.collectionView.reloadData()
     }
     
-    //MARK: action function
+    //MARK: - filter view delegate
+    func onApplyFilter(model: FilterModel) {
+        productList.removeAll()
+        productManager?.loadWithFilter(model: model)
+        
+    }
+    
+    //MARK: - action function
     @IBAction func onClickFilter(_ sender: UIButton) {
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "Filter") as? FilterViewController {
+            viewController.delegate = self
             navigationController?.pushViewController(viewController, animated: true)
         }
     }

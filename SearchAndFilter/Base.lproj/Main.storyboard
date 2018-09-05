@@ -229,7 +229,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tiv-MK-Qzt">
-                                        <rect key="frame" x="33" y="33" width="33" height="21"/>
+                                        <rect key="frame" x="33" y="33" width="124" height="21"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -312,6 +312,7 @@
                                     <constraint firstItem="ukr-cq-iEr" firstAttribute="top" secondItem="v8F-bY-pB6" secondAttribute="bottom" constant="4" id="IuX-S6-bQY"/>
                                     <constraint firstItem="V0J-Al-eQr" firstAttribute="leading" secondItem="gdc-ay-3DI" secondAttribute="leading" id="JBY-Qf-9ID"/>
                                     <constraint firstAttribute="trailing" secondItem="V0J-Al-eQr" secondAttribute="trailing" id="KCL-DF-2c2"/>
+                                    <constraint firstItem="tiv-MK-Qzt" firstAttribute="trailing" secondItem="Vmp-ht-sHl" secondAttribute="trailing" id="LDA-18-wRU"/>
                                     <constraint firstItem="v8F-bY-pB6" firstAttribute="top" secondItem="gdc-ay-3DI" secondAttribute="top" constant="8" id="Rq2-rM-4sp"/>
                                     <constraint firstItem="V0J-Al-eQr" firstAttribute="top" secondItem="Vmp-ht-sHl" secondAttribute="bottom" constant="8" id="TVQ-6U-ixy"/>
                                     <constraint firstItem="zyD-UH-tyH" firstAttribute="centerY" secondItem="uos-XA-wgH" secondAttribute="centerY" id="U8f-hD-cDx"/>
@@ -440,6 +441,7 @@
                         <outlet property="minimumPriceField" destination="tiv-MK-Qzt" id="ItR-G0-zgZ"/>
                         <outlet property="shopTypeView" destination="mFG-dJ-KMG" id="w2A-Tz-GtM"/>
                         <outlet property="sliderView" destination="V0J-Al-eQr" id="RDm-Vu-8PP"/>
+                        <outlet property="wholeSwitch" destination="4xX-Nu-Pqm" id="yqq-cT-G1M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NnI-VJ-t14" userLabel="First Responder" sceneMemberID="firstResponder"/>

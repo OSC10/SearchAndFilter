@@ -20,7 +20,7 @@ class ProductModel: NSObject {
         self.image_url = json["image_uri"].stringValue
     }
     
-    init(id: String, price: String, name: String, image_url: String) {
+    init(price: String, name: String, image_url: String) {
         self.price = price
         self.name = name
         self.image_url = image_url

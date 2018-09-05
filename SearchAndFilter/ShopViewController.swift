@@ -69,11 +69,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func onClickReset(_ sender: UIButton) {
-        for word in activeFilter {
-            if let index = activeFilter.index(of: word){
-                self.activeFilter.remove(at:index)
-            }
-        }
+        self.activeFilter.removeAll()
         shopTableView.reloadData()
     }
     
