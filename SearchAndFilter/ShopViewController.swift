@@ -40,7 +40,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let name = shopList[indexPath.row]
         
         let cell = shopTableView.dequeueReusableCell(withIdentifier: "shopCell", for: indexPath) as! ShopTableViewCell
-        cell.setUpData(name: name)
+        cell.setUpData(name: name, isChecked: activeFilter.contains(name))
         
         cell.delegate = self
         

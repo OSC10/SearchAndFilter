@@ -86,6 +86,7 @@ class FilterViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBAction func onClickShop(_ sender: UIButton) {
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "shop") as? ShopViewController {
             viewController.delegate = self
+            viewController.activeFilter = activeType
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
