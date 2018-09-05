@@ -9,12 +9,14 @@
 import UIKit
 import MARKRangeSlider
 
-class FilterViewController: UIViewController {
+class FilterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ShopViewControllerDelegate, ShopTypeDelegate {
 
     @IBOutlet var minimumPriceField: UITextField!
     @IBOutlet var maximumPriceField: UITextField!
     @IBOutlet var sliderView: MARKRangeSlider!
+    @IBOutlet var shopTypeView: UICollectionView!
     
+    var activeType = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,41 @@ class FilterViewController: UIViewController {
         
         self.maximumPriceField.text = String(Int(slider.rightValue - slider.rightValue.truncatingRemainder(dividingBy: 1000)))
     }
+    
+    //MARK: shop type delegate
+    
+    func onApplyShopType(shop:[String]) {
+        self.activeType = shop
+        
+        self.shopTypeView.reloadData()
+    }
+    
+    //MARK: collection view delegate
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return activeType.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopType", for: indexPath) as! ShopTypeCell
+        
+        let name = activeType[indexPath.item]
+        
+        cell.fillCell(name: name)
+        cell.delegate = self
+        
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 3
+        
+        return cell
+    }
+    
+    //MARK: shop type delegate
+    func onDelete(type: String) {
+        if let index = activeType.index(of: type){
+            self.activeType.remove(at:index)
+        }
+        self.shopTypeView.reloadData()
+    }
 
     //MARK: action function
     @IBAction func onClickCancel(_ sender: UIButton) {
@@ -48,6 +85,7 @@ class FilterViewController: UIViewController {
     
     @IBAction func onClickShop(_ sender: UIButton) {
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "shop") as? ShopViewController {
+            viewController.delegate = self
             navigationController?.pushViewController(viewController, animated: true)
         }
     }

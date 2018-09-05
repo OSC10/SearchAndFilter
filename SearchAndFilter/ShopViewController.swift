@@ -14,6 +14,7 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let shopList = ["Gold Merchant", "Official Store"]
     var activeFilter = [String]()
+    var delegate : ShopViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +78,8 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func onClickApply(_ sender: UIButton) {
+        self.delegate?.onApplyShopType(shop: self.activeFilter)
         
+        navigationController?.popViewController(animated: true)
     }
 }

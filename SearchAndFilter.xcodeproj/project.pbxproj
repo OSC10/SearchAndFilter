@@ -23,6 +23,8 @@
 		4DE93413214030D600099D89 /* ShopTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE93412214030D600099D89 /* ShopTableViewCellDelegate.swift */; };
 		4DE934152140338D00099D89 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE934142140338D00099D89 /* ShopViewController.swift */; };
 		4DE934172140428900099D89 /* ShopViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE934162140428900099D89 /* ShopViewControllerDelegate.swift */; };
+		4DE934192140478000099D89 /* ShopTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE934182140478000099D89 /* ShopTypeCell.swift */; };
+		4DE9341B21404C2B00099D89 /* ShopTypeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9341A21404C2B00099D89 /* ShopTypeDelegate.swift */; };
 		B019C2D3E4A0CC4514088E90 /* Pods_SearchAndFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB413B0A3B027E5EB002401F /* Pods_SearchAndFilter.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		4DE93412214030D600099D89 /* ShopTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		4DE934142140338D00099D89 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		4DE934162140428900099D89 /* ShopViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewControllerDelegate.swift; sourceTree = "<group>"; };
+		4DE934182140478000099D89 /* ShopTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeCell.swift; sourceTree = "<group>"; };
+		4DE9341A21404C2B00099D89 /* ShopTypeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeDelegate.swift; sourceTree = "<group>"; };
 		65F30FE3D033EBF008E38927 /* Pods-SearchAndFilter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchAndFilter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchAndFilter/Pods-SearchAndFilter.debug.xcconfig"; sourceTree = "<group>"; };
 		76D160FCBE84279CB9D8E99F /* Pods-SearchAndFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchAndFilter.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchAndFilter/Pods-SearchAndFilter.release.xcconfig"; sourceTree = "<group>"; };
 		AB413B0A3B027E5EB002401F /* Pods_SearchAndFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchAndFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +120,8 @@
 				4DE9340E21402D2100099D89 /* ShopTableViewCell.swift */,
 				4DE93412214030D600099D89 /* ShopTableViewCellDelegate.swift */,
 				4DE9340F21402D2100099D89 /* ShopTableViewCell.xib */,
+				4DE934182140478000099D89 /* ShopTypeCell.swift */,
+				4DE9341A21404C2B00099D89 /* ShopTypeDelegate.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -280,9 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE934192140478000099D89 /* ShopTypeCell.swift in Sources */,
 				4D77430C213D87B9000B0229 /* ListViewController.swift in Sources */,
 				4DA06424213ED62E0096EAB8 /* ProductModel.swift in Sources */,
 				4DE934152140338D00099D89 /* ShopViewController.swift in Sources */,
+				4DE9341B21404C2B00099D89 /* ShopTypeDelegate.swift in Sources */,
 				4DE93413214030D600099D89 /* ShopTableViewCellDelegate.swift in Sources */,
 				4DA0642B213F063C0096EAB8 /* FilterViewController.swift in Sources */,
 				4DA0641E213EC62E0096EAB8 /* ProductCell.swift in Sources */,

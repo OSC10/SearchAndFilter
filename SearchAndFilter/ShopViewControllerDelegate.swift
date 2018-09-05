@@ -8,6 +8,8 @@
 
 import UIKit
 
-class ShopViewControllerDelegate: NSObject {
+protocol ShopViewControllerDelegate {
 
+    func onApplyShopType(shop:[String])
+    
 }

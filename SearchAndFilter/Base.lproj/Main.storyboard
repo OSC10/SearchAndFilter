@@ -359,14 +359,71 @@
                                     <constraint firstItem="jpY-6n-ozH" firstAttribute="top" secondItem="dRq-eW-eaE" secondAttribute="top" id="xHF-tk-oFG"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mFG-dJ-KMG">
+                                <rect key="frame" x="0.0" y="314" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="t8X-PP-wyl"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BWM-qM-36u">
+                                    <size key="itemSize" width="150" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopType" id="xAM-cu-ep5" customClass="ShopTypeCell" customModule="SearchAndFilter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="shop type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arH-Rj-hbC">
+                                                    <rect key="frame" x="16" y="17" width="90" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faf-wG-PXi">
+                                                    <rect key="frame" x="114" y="15" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="kGf-AM-b7G"/>
+                                                        <constraint firstAttribute="height" constant="20" id="nEN-jH-ApH"/>
+                                                    </constraints>
+                                                    <state key="normal" image="cancel_icon"/>
+                                                    <connections>
+                                                        <action selector="onClickDelete:" destination="xAM-cu-ep5" eventType="touchUpInside" id="bdg-h9-X7h"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="arH-Rj-hbC" firstAttribute="leading" secondItem="xAM-cu-ep5" secondAttribute="leadingMargin" constant="8" id="0tg-Zm-ObZ"/>
+                                            <constraint firstItem="arH-Rj-hbC" firstAttribute="centerY" secondItem="xAM-cu-ep5" secondAttribute="centerY" id="F4u-6h-EcZ"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="faf-wG-PXi" secondAttribute="trailing" constant="8" id="Mfz-v2-X02"/>
+                                            <constraint firstItem="faf-wG-PXi" firstAttribute="centerY" secondItem="xAM-cu-ep5" secondAttribute="centerY" id="beA-0f-Nwq"/>
+                                            <constraint firstItem="faf-wG-PXi" firstAttribute="leading" secondItem="arH-Rj-hbC" secondAttribute="trailing" constant="8" id="tYb-VB-BLL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="shopTypeLabel" destination="arH-Rj-hbC" id="GaN-Ow-P1b"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vRw-ey-CZh" id="MJc-iI-yJB"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gdc-ay-3DI" firstAttribute="top" secondItem="3ZL-mT-M3c" secondAttribute="bottom" constant="14" id="2w4-I6-eU6"/>
+                            <constraint firstItem="mFG-dJ-KMG" firstAttribute="leading" secondItem="7X5-qX-8aG" secondAttribute="leading" id="FD9-2b-t3q"/>
                             <constraint firstItem="ka5-RR-qTW" firstAttribute="leading" secondItem="7X5-qX-8aG" secondAttribute="leading" id="GP1-W2-sgn"/>
                             <constraint firstItem="3ZL-mT-M3c" firstAttribute="leading" secondItem="7X5-qX-8aG" secondAttribute="leading" constant="4" id="JLL-n2-2nW"/>
                             <constraint firstItem="7X5-qX-8aG" firstAttribute="bottom" secondItem="ka5-RR-qTW" secondAttribute="bottom" id="Kst-W0-QGX"/>
                             <constraint firstItem="3ZL-mT-M3c" firstAttribute="top" secondItem="7X5-qX-8aG" secondAttribute="top" id="Lgl-hu-xVh"/>
+                            <constraint firstItem="7X5-qX-8aG" firstAttribute="trailing" secondItem="mFG-dJ-KMG" secondAttribute="trailing" id="Nvg-1c-dNM"/>
                             <constraint firstItem="7X5-qX-8aG" firstAttribute="trailing" secondItem="ka5-RR-qTW" secondAttribute="trailing" id="VYC-Mw-5ZN"/>
                             <constraint firstItem="7X5-qX-8aG" firstAttribute="trailing" secondItem="dRq-eW-eaE" secondAttribute="trailing" id="Z3E-rl-Irv"/>
                             <constraint firstItem="dRq-eW-eaE" firstAttribute="top" secondItem="gdc-ay-3DI" secondAttribute="bottom" constant="8" id="e2S-5q-fBI"/>
@@ -374,12 +431,14 @@
                             <constraint firstItem="gdc-ay-3DI" firstAttribute="leading" secondItem="7X5-qX-8aG" secondAttribute="leading" constant="4" id="pFC-Ri-O2Y"/>
                             <constraint firstItem="7X5-qX-8aG" firstAttribute="trailing" secondItem="gdc-ay-3DI" secondAttribute="trailing" constant="4" id="udW-hx-R88"/>
                             <constraint firstItem="7X5-qX-8aG" firstAttribute="trailing" secondItem="3ZL-mT-M3c" secondAttribute="trailing" constant="4" id="wIs-Fy-zUQ"/>
+                            <constraint firstItem="mFG-dJ-KMG" firstAttribute="top" secondItem="dRq-eW-eaE" secondAttribute="bottom" id="xzr-Ad-D8p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7X5-qX-8aG"/>
                     </view>
                     <connections>
                         <outlet property="maximumPriceField" destination="zyD-UH-tyH" id="uQs-cf-DWC"/>
                         <outlet property="minimumPriceField" destination="tiv-MK-Qzt" id="ItR-G0-zgZ"/>
+                        <outlet property="shopTypeView" destination="mFG-dJ-KMG" id="w2A-Tz-GtM"/>
                         <outlet property="sliderView" destination="V0J-Al-eQr" id="RDm-Vu-8PP"/>
                     </connections>
                 </viewController>

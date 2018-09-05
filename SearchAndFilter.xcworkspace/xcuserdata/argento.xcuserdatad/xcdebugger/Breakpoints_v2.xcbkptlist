@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SearchAndFilter/Cell/ShopTableViewCell.swift"
-            timestampString = "557859278.913946"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "setUpData(name:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SearchAndFilter/Cell/ShopTableViewCell.swift"
-            timestampString = "557859278.914857"
+            filePath = "SearchAndFilter/Cell/ShopTypeCell.swift"
+            timestampString = "557862359.304605"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "setUpData(name:)"
+            landmarkName = "onClickDelete(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

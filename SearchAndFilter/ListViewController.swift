@@ -22,7 +22,7 @@ class ListViewController: UIViewController, UICollectionViewDelegate, UICollecti
         productManager?.loadProduct()
     }
     
-    //MARK: connection manager delegate
+    //MARK: collection view delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productList.count
     }
