@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SearchAndFilter/Manager/ProductConnectionManager.swift"
-            timestampString = "557782163.038407"
+            filePath = "SearchAndFilter/Cell/ShopTableViewCell.swift"
+            timestampString = "557859278.913946"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "loadProduct()"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "setUpData(name:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SearchAndFilter/ListViewController.swift"
-            timestampString = "557853288.438988"
+            filePath = "SearchAndFilter/Cell/ShopTableViewCell.swift"
+            timestampString = "557859278.914857"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "connectionFinished(_:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "setUpData(name:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

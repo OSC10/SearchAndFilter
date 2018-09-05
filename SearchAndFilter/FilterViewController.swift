@@ -41,4 +41,18 @@ class FilterViewController: UIViewController {
     @IBAction func onClickCancel(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func onClickReset(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func onClickShop(_ sender: UIButton) {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "shop") as? ShopViewController {
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+
+    @IBAction func onClickApply(_ sender: UIButton) {
+        
+    }
 }
